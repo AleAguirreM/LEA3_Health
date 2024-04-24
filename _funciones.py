@@ -26,8 +26,8 @@ def img2data(path, width=100):
                 img = cv2.resize(img ,(width,width)) ### cambia resolución de imágnenes
                 rawImgs.append(img) ###adiciona imágen al array final
                 l = imagePath.split('/')[2] ### identificar en qué carpeta está
-                if l == 'Normal':  ### verificar en qué carpeta está para asignar el label
+                if l == 'NORMAL':  ### verificar en qué carpeta está para asignar el label
                     labels.append([0])
-                elif l == 'Tuberculosis':
+                elif l == 'TUBERCULOSIS':
                     labels.append([1])
     return rawImgs, labels
